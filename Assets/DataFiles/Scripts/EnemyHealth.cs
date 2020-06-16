@@ -1,0 +1,30 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class EnemyHealth : MonoBehaviour
+{
+    int fullHealth = 100;
+    int remainningHealth;
+
+    private void Start()
+    {
+        remainningHealth = fullHealth;
+    }
+
+    public void Hit(int hit)
+    {
+
+        remainningHealth -= hit;
+        CheckStatus();
+    }
+
+    void CheckStatus()
+    {
+        if (remainningHealth<=0)
+        {
+            Destroy(gameObject);
+        }
+        print(remainningHealth);
+    }
+}
