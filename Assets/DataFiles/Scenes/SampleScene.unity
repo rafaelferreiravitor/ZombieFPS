@@ -108,7 +108,7 @@ NavMeshSettings:
     agentRadius: 0.1
     agentHeight: 0.5
     agentSlope: 45.58
-    agentClimb: 0.4
+    agentClimb: 0.2
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
@@ -732,6 +732,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 584a8ef4749c89745b7ae07f3ba7617f, type: 3}
+--- !u!1 &1432208535 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100006, guid: c6453f8e1f814744d8b94e5a6d1f9942,
+    type: 3}
+  m_PrefabInstance: {fileID: 47096791}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1617044545
 GameObject:
   m_ObjectHideFlags: 0
@@ -1146,7 +1152,7 @@ PrefabInstance:
     - target: {fileID: 2205154794506580723, guid: c9e1b477f02954d41a3e80962cb0c7c2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.507
+      value: 1.98
       objectReference: {fileID: 0}
     - target: {fileID: 2205154794506580723, guid: c9e1b477f02954d41a3e80962cb0c7c2,
         type: 3}
@@ -1198,6 +1204,11 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1101420377}
+    - target: {fileID: 6078350996422493010, guid: c9e1b477f02954d41a3e80962cb0c7c2,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1432208535}
     - target: {fileID: 7241176599749746685, guid: c9e1b477f02954d41a3e80962cb0c7c2,
         type: 3}
       propertyPath: m_Name
