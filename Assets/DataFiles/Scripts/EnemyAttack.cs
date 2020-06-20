@@ -5,10 +5,17 @@ using UnityEngine;
 public class EnemyAttack : MonoBehaviour
 {
 
-    [SerializeField] GameObject target;
+    PlayerHealth target;
     [SerializeField] int damage = 40;
 
+
+    private void Awake()
+    {
+        target = FindObjectOfType<PlayerHealth>();
+    }
+
     public void Attack(){
+        target.Damage(damage);
         print("Attack");
     }
 
