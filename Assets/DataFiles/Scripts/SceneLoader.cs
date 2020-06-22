@@ -10,6 +10,9 @@ public class SceneLoader : MonoBehaviour
         if (scene == "Quit")
             Application.Quit();
         else
+        {
             SceneManager.LoadScene("SampleScene");
+            Time.timeScale = 1;
+        }
     }
 }

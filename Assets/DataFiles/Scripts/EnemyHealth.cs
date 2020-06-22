@@ -17,6 +17,7 @@ public class EnemyHealth : MonoBehaviour
 
         remainningHealth -= hit;
         CheckStatus();
+        BroadcastMessage("OnDamageTaken");
     }
 
     void CheckStatus()
