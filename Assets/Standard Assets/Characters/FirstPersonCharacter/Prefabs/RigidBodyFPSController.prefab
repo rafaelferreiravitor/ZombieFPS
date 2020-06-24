@@ -181,6 +181,7 @@ GameObject:
   - component: {fileID: 13600000}
   - component: {fileID: 11400004}
   - component: {fileID: 3806917732636165987}
+  - component: {fileID: 1970949938}
   m_Layer: 0
   m_Name: RigidBodyFPSController
   m_TagString: Untagged
@@ -314,6 +315,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9822d56d62669c44823994ae5ae9572, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 0
+--- !u!114 &1970949938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2febcae3b3d04e64e8e4855d151bef0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverCanvas: {fileID: 0}
 --- !u!1 &2378788975105504985
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,6 +338,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8422367871652424144}
+  - component: {fileID: 1952573565}
   m_Layer: 0
   m_Name: Weapons
   m_TagString: Untagged
@@ -345,6 +361,20 @@ Transform:
   m_Father: {fileID: 400000}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1952573565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2378788975105504985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26d56ee37d57bac4980c3acbd72c095b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zoomIn: 30
+  zoomOut: 60
 --- !u!1001 &3771377332315547993
 PrefabInstance:
   m_ObjectHideFlags: 0
