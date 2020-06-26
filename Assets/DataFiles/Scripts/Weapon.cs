@@ -10,7 +10,7 @@ public class Weapon : MonoBehaviour
     int weaponHit = 10;
     [SerializeField] ParticleSystem muzzleFlashVFX;
     [SerializeField] GameObject hitFeedbackVFX;
-
+    [SerializeField] Ammo ammoSlot;
 
     private void Update()
     {
@@ -23,8 +23,12 @@ public class Weapon : MonoBehaviour
     void Shoot()
     {
 
-        HitTarget();
-        HitVFX();
+        if (ammoSlot.GetCurrentAmmo() > 0)
+        {
+            HitTarget();
+            HitVFX();
+            ammoSlot.ReduceAmmo();
+        }
 
     }
 

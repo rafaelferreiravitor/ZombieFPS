@@ -250,6 +250,26 @@ PrefabInstance:
       propertyPath: gameOverCanvas
       value: 
       objectReference: {fileID: 817321534}
+    - target: {fileID: 1973165815742659171, guid: c6453f8e1f814744d8b94e5a6d1f9942,
+        type: 3}
+      propertyPath: ammoSlot
+      value: 
+      objectReference: {fileID: 1854940377}
+    - target: {fileID: 1973165815742659171, guid: c6453f8e1f814744d8b94e5a6d1f9942,
+        type: 3}
+      propertyPath: FPCamera
+      value: 
+      objectReference: {fileID: 225585103}
+    - target: {fileID: 6134474067323092992, guid: c6453f8e1f814744d8b94e5a6d1f9942,
+        type: 3}
+      propertyPath: ammoSlot
+      value: 
+      objectReference: {fileID: 1854940377}
+    - target: {fileID: 6134474067323092992, guid: c6453f8e1f814744d8b94e5a6d1f9942,
+        type: 3}
+      propertyPath: FPCamera
+      value: 
+      objectReference: {fileID: 225585103}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
 --- !u!1001 &47637172
@@ -492,6 +512,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 62012431}
   m_CullTransparentMesh: 0
+--- !u!20 &225585103 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2000000, guid: c6453f8e1f814744d8b94e5a6d1f9942,
+    type: 3}
+  m_PrefabInstance: {fileID: 47096791}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &287242657
 GameObject:
   m_ObjectHideFlags: 0
@@ -1570,7 +1596,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 47096791}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1854940372}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9822d56d62669c44823994ae5ae9572, type: 3}
@@ -1921,6 +1947,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1832544840}
   m_CullTransparentMesh: 0
+--- !u!1 &1854940372 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100006, guid: c6453f8e1f814744d8b94e5a6d1f9942,
+    type: 3}
+  m_PrefabInstance: {fileID: 47096791}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1854940377 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3734091022132249514, guid: c6453f8e1f814744d8b94e5a6d1f9942,
+    type: 3}
+  m_PrefabInstance: {fileID: 47096791}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854940372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82edfb7d02e2a9742a266bcb7b057262, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1854940378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854940372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecde0fdc3a6ab704ba637e3bf02316c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponSlot: []
 --- !u!1001 &1867484851
 PrefabInstance:
   m_ObjectHideFlags: 0
