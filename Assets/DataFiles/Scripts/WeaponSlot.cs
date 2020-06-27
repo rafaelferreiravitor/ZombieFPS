@@ -9,9 +9,8 @@ public class WeaponSlot : MonoBehaviour
 
     private void Awake()
     {
-        var camera = transform.Find("MainCamera");
-        var weapons = camera.transform.Find("Weapons");
-        foreach (Transform item in weapons.transform)
+
+        foreach (Transform item in transform)
         {
             weaponSlot.Add(item.GetComponent<Weapon>());
         }
@@ -19,7 +18,6 @@ public class WeaponSlot : MonoBehaviour
             foreach (var item in weaponSlot)
             {
                 item.gameObject.SetActive(false);
-                print("dsadsadas"); 
             }
             weaponSlot[activeWeapon].gameObject.SetActive(true);
         }

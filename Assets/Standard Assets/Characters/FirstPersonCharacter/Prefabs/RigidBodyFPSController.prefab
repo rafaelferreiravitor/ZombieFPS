@@ -352,7 +352,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8422367871652424144}
-  - component: {fileID: 1952573565}
+  - component: {fileID: 1154513265}
   m_Layer: 0
   m_Name: Weapons
   m_TagString: Untagged
@@ -377,7 +377,7 @@ Transform:
   m_Father: {fileID: 400000}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1952573565
+--- !u!114 &1154513265
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -386,9 +386,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2378788975105504985}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26d56ee37d57bac4980c3acbd72c095b, type: 3}
+  m_Script: {fileID: 11500000, guid: ecde0fdc3a6ab704ba637e3bf02316c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponSlot: []
 --- !u!1001 &1541290069349995751
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -396,6 +397,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8422367871652424144}
     m_Modifications:
+    - target: {fileID: 1978818967880791771, guid: b12e37cc3ce577a419a946e22d7fa048,
+        type: 3}
+      propertyPath: zoomIn
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 4119232917520666647, guid: b12e37cc3ce577a419a946e22d7fa048,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -456,10 +462,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pistol
       objectReference: {fileID: 0}
-    - target: {fileID: 4119232917520895031, guid: b12e37cc3ce577a419a946e22d7fa048,
+    - target: {fileID: 4630198012349650151, guid: b12e37cc3ce577a419a946e22d7fa048,
         type: 3}
-      propertyPath: m_IsActive
-      value: 0
+      propertyPath: range
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4630198012349650151, guid: b12e37cc3ce577a419a946e22d7fa048,
+        type: 3}
+      propertyPath: FPCamera
+      value: 
+      objectReference: {fileID: 2000000}
+    - target: {fileID: 4630198012349650151, guid: b12e37cc3ce577a419a946e22d7fa048,
+        type: 3}
+      propertyPath: ammoSlot
+      value: 
+      objectReference: {fileID: 3734091022132249514}
+    - target: {fileID: 4630198012349650151, guid: b12e37cc3ce577a419a946e22d7fa048,
+        type: 3}
+      propertyPath: timeBetweenShots
+      value: 0.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b12e37cc3ce577a419a946e22d7fa048, type: 3}
@@ -476,6 +497,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8422367871652424144}
     m_Modifications:
+    - target: {fileID: 1047174120796162269, guid: ada2587319194f542957a8c2ae277cb9,
+        type: 3}
+      propertyPath: zoomIn
+      value: 35
+      objectReference: {fileID: 0}
     - target: {fileID: 2337074158996965286, guid: ada2587319194f542957a8c2ae277cb9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -536,10 +562,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Carbine
       objectReference: {fileID: 0}
-    - target: {fileID: 2337074158997199750, guid: ada2587319194f542957a8c2ae277cb9,
+    - target: {fileID: 6414608682322625366, guid: ada2587319194f542957a8c2ae277cb9,
         type: 3}
-      propertyPath: m_IsActive
-      value: 0
+      propertyPath: range
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6414608682322625366, guid: ada2587319194f542957a8c2ae277cb9,
         type: 3}
@@ -551,6 +577,11 @@ PrefabInstance:
       propertyPath: ammoSlot
       value: 
       objectReference: {fileID: 3734091022132249514}
+    - target: {fileID: 6414608682322625366, guid: ada2587319194f542957a8c2ae277cb9,
+        type: 3}
+      propertyPath: timeBetweenShots
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
 --- !u!4 &1457032277696622335 stripped
@@ -625,6 +656,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Shotgun
+      objectReference: {fileID: 0}
+    - target: {fileID: 4630198012349650151, guid: b234069b4015a894d8d829bedae45bc0,
+        type: 3}
+      propertyPath: FPCamera
+      value: 
+      objectReference: {fileID: 2000000}
+    - target: {fileID: 4630198012349650151, guid: b234069b4015a894d8d829bedae45bc0,
+        type: 3}
+      propertyPath: ammoSlot
+      value: 
+      objectReference: {fileID: 3734091022132249514}
+    - target: {fileID: 4630198012349650151, guid: b234069b4015a894d8d829bedae45bc0,
+        type: 3}
+      propertyPath: timeBetweenShots
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269905602995834285, guid: b234069b4015a894d8d829bedae45bc0,
+        type: 3}
+      propertyPath: zoomIn
+      value: 17
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b234069b4015a894d8d829bedae45bc0, type: 3}

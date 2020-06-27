@@ -6,7 +6,7 @@ using UnityStandardAssets.Characters.FirstPerson;
 public class WeaponZoom : MonoBehaviour
 {
 
-    float zoomIn = 20f;
+    [SerializeField] float zoomIn = 20f;
     float zoomOut = 60f;
     Camera fpsCamera;
 
