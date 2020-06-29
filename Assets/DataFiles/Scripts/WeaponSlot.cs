@@ -29,24 +29,59 @@ public class WeaponSlot : MonoBehaviour
 
     private void Update()
     {
+        ActiveNextWeapon();
+    }
+
+    void ActiveNextWeapon()
+    {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            ChangeActiveWeapon();
+            weaponSlot[activeWeapon].gameObject.SetActive(false);
+            activeWeapon++;
+
+            if (activeWeapon == weaponSlot.Count)
+                activeWeapon = 0;
+            else if (activeWeapon < -1)
+                activeWeapon = weaponSlot.Count - 1;
         }
-    }
-
-    void ChangeActiveWeapon()
-    {
-        weaponSlot[activeWeapon].gameObject.SetActive(false);
-        activeWeapon++;
-
-        if (activeWeapon == weaponSlot.Count)
+        else if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            weaponSlot[activeWeapon].gameObject.SetActive(false);
             activeWeapon = 0;
-        else if (activeWeapon <-1)
-            activeWeapon = weaponSlot.Count-1;
-        
+            weaponSlot[activeWeapon].gameObject.SetActive(false);
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            weaponSlot[activeWeapon].gameObject.SetActive(false);
+            activeWeapon = 1;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            
+            activeWeapon = 2;
+        }
+        else if(Input.GetAxis("Mouse ScrollWheel") < 0)
+        {
+            weaponSlot[activeWeapon].gameObject.SetActive(false);
+
+            if (activeWeapon >= weaponSlot.Count - 1)
+                activeWeapon = 0;
+            else
+                activeWeapon++;
+        }
+        else if (Input.GetAxis("Mouse ScrollWheel") > 0)
+        {
+            weaponSlot[activeWeapon].gameObject.SetActive(false);
+
+            if (activeWeapon <= 0)
+                activeWeapon = weaponSlot.Count - 1;
+            else
+                activeWeapon--;
+        }
+
         weaponSlot[activeWeapon].gameObject.SetActive(true);
+
     }
 
-    
+
 }
