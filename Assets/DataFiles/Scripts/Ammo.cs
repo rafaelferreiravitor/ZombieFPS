@@ -11,18 +11,30 @@ public class Ammo : MonoBehaviour
     [Serializable]
     private class AmmoSlot
     {
-        public AmmonType ammoType;
+        public AmmoType ammoType;
         public int ammoAmount;
     }
 
-    public int GetCurrentAmmo()
+    public int GetCurrentAmmo(AmmoType type)
     {
-        return ammoAmount;
+        return FindAmmoByType(type).ammoAmount;
     }
 
-    public void ReduceAmmo()
+    public void ReduceAmmo(AmmoType type)
     {
-        ammoAmount--;
+        FindAmmoByType(type).ammoAmount--;
+    }
+
+    AmmoSlot FindAmmoByType(AmmoType type)
+    {
+        foreach (var item in ammoSlot)
+        {
+            if(item.ammoType == type)
+            {
+                return item;
+            }
+        }
+        return null;
     }
 
 

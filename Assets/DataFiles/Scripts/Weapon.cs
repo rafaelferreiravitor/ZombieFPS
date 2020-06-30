@@ -12,6 +12,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] GameObject hitFeedbackVFX;
     [SerializeField] Ammo ammoSlot;
     [SerializeField] float timeBetweenShots = 2;
+    [SerializeField] AmmoType ammoType;
     bool canShoot = true;
 
     private void OnEnable()
@@ -31,11 +32,11 @@ public class Weapon : MonoBehaviour
     IEnumerator Shoot()
     {
         canShoot = false;
-        if (ammoSlot.GetCurrentAmmo() > 0)
+        if (ammoSlot.GetCurrentAmmo(ammoType) > 0)
         {
             HitTarget();
             HitVFX();
-            ammoSlot.ReduceAmmo();
+            ammoSlot.ReduceAmmo(ammoType);
         }
         print("before yield");
         yield return new WaitForSeconds(timeBetweenShots);
