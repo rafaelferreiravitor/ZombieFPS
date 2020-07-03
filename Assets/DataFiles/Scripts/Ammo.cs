@@ -25,6 +25,11 @@ public class Ammo : MonoBehaviour
         FindAmmoByType(type).ammoAmount--;
     }
 
+    public void IncreaseAmmo(AmmoType type, int amount)
+    {
+        FindAmmoByType(type).ammoAmount += amount;
+    }
+
     AmmoSlot FindAmmoByType(AmmoType type)
     {
         foreach (var item in ammoSlot)
@@ -36,6 +41,7 @@ public class Ammo : MonoBehaviour
         }
         return null;
     }
+
 
 
 }
