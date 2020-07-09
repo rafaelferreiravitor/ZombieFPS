@@ -24,7 +24,9 @@ public class EnemyHealth : MonoBehaviour
     {
         if (remainningHealth<=0)
         {
-            Destroy(gameObject);
+            ///Destroy(gameObject);
+            GetComponent<Animator>().SetTrigger("Die");
+            SendMessage("Die");
         }
         print(remainningHealth);
     }
