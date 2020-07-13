@@ -27,6 +27,16 @@ public class FlashLight : MonoBehaviour
         DecreaseLightIntensity();
     }
 
+    public void RestoreLightIntensity(float restore)
+    {
+        myLight.intensity += restore;
+    }
+
+    public void RestoreLightAngle(float restore)
+    {
+        myLight.spotAngle = restore;
+    }
+
     private void DecreaseLightIntensity()
     {
         myLight.intensity -= lightDecay*Time.deltaTime;
