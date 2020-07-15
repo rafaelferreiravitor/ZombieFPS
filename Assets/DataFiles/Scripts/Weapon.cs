@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Experimental.VFX;
 
@@ -13,6 +14,8 @@ public class Weapon : MonoBehaviour
     [SerializeField] Ammo ammoSlot;
     [SerializeField] float timeBetweenShots = 2;
     [SerializeField] AmmoType ammoType;
+    [SerializeField] TextMeshProUGUI ammoAmountText;
+
     bool canShoot = true;
 
     private void OnEnable()
@@ -29,6 +32,11 @@ public class Weapon : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        DisplayAmmoAmount();
+    }
+
     IEnumerator Shoot()
     {
         canShoot = false;
@@ -36,6 +44,7 @@ public class Weapon : MonoBehaviour
         {
             HitTarget();
             HitVFX();
+            DisplayAmmoAmount();
             ammoSlot.ReduceAmmo(ammoType);
         }
         print("before yield");
@@ -70,5 +79,11 @@ public class Weapon : MonoBehaviour
 
         muzzleFlashVFX.Play();
     }
+
+    void DisplayAmmoAmount()
+    {
+        ammoAmountText.text = ammoSlot.GetCurrentAmmo(ammoType).ToString();
+    }
+    
 
 }

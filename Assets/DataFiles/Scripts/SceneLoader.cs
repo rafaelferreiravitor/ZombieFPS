@@ -11,7 +11,7 @@ public class SceneLoader : MonoBehaviour
             Application.Quit();
         else
         {
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene(scene);
             Time.timeScale = 1;
         }
     }

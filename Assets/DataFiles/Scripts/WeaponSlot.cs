@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class WeaponSlot : MonoBehaviour
 {
     [SerializeField] List<Weapon> weaponSlot = new List<Weapon>();
     int activeWeapon = 0;
+
 
     private void Awake()
     {
@@ -82,6 +84,7 @@ public class WeaponSlot : MonoBehaviour
         weaponSlot[activeWeapon].gameObject.SetActive(true);
 
     }
+
 
 
 }

@@ -16,6 +16,7 @@ public class EnemyAttack : MonoBehaviour
 
     public void Attack(){
         target.Damage(damage);
+        target.GetComponent<DisplayDamage>().DisplayDamageUI();
         print("Attack");
     }
 

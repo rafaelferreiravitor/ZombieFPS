@@ -59,6 +59,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce0aa661917c202429d0beb300cd4c94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  batteryLight: 0.8
+  batteryAngle: 90
 --- !u!1 &6914883217831092477
 GameObject:
   m_ObjectHideFlags: 0
@@ -84,7 +86,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6914883217831092477}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.9, z: 0}
+  m_LocalPosition: {x: 0, y: 2.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2559337860540144876}
@@ -175,12 +177,12 @@ PrefabInstance:
     - target: {fileID: 8679245312146116331, guid: ecc2b37d45880ff4890a32395a33bee1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.2204
       objectReference: {fileID: 0}
     - target: {fileID: 8679245312146116331, guid: ecc2b37d45880ff4890a32395a33bee1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.24035
       objectReference: {fileID: 0}
     - target: {fileID: 8679245312146116331, guid: ecc2b37d45880ff4890a32395a33bee1,
         type: 3}
@@ -226,6 +228,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8679245312146116331, guid: ecc2b37d45880ff4890a32395a33bee1,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5591969
+      objectReference: {fileID: 0}
+    - target: {fileID: 8679245312146116331, guid: ecc2b37d45880ff4890a32395a33bee1,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5591969
+      objectReference: {fileID: 0}
+    - target: {fileID: 8679245312146116331, guid: ecc2b37d45880ff4890a32395a33bee1,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5591969
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecc2b37d45880ff4890a32395a33bee1, type: 3}
